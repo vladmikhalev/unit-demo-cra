@@ -22,6 +22,8 @@ jobs:
         run: npm run build
       - name: Eject project
         run: npm run eject
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium    
       - name: unit test
         run: npm run test
       - name: e2e test
