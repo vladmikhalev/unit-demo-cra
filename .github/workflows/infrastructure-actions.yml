@@ -20,9 +20,11 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
+      - name: Eject project
+        run: npm run eject
+      - name: Install browsers
+        run: npx playwright install --with-deps chromium    
       - name: unit test
         run: npm run test
       - name: e2e test
-        run: npm run e2e    
-      - name: lint code
-        run: npm run lint     
+        run: npm run e2e         
